@@ -51,7 +51,7 @@ def get_username_or_first_name(chat_id, user_id):
 
 @app.route('/', methods=['GET', 'HEAD'])
 def index():
-    return '<h1>Happy Birthday Telegram Bot by Iron Tony</h1>'
+    return '<h1>Happy Birthday Telegram Bot by Chaghatai with minor changes forked from Iron Tony</h1>'
 
 
 @app.route('/', methods=['POST'])
@@ -120,7 +120,7 @@ def handle_text(message):
         bot.reply_to(message, "Looks like something is wrong with the month")
         return
 
-    if int(year) > 2016 or int(year) < 1900:
+    if int(year) > 2023 or int(year) < 1900:
         bot.reply_to(message,
                      "Hey, I don't believe you! You can't be born in {}!"
                      "\nIf you are woman or (and) you are "
@@ -212,14 +212,10 @@ def handle_text(message):
                      "\nI am HappyBirthdayBot and I’ll make sure your friends are happy when their birthdays come! "
                      "\n\nAll you need to do is to add me to your chat group and ask your friends to type the command "
                      "/mybirthday [date of your friend's birthday in format dd.mm.yyyy]. Don’t forget to do the same "
-                     "and you are all done! When the day comes I’ll send my congratulation to this chat group. Also, "
-                     "I’ll take the birthday person's profile photo, modify it adding some cool things and send "
-                     "it too. Finally, I’ll set this new photo as the chat profile photo! Next day I will reset the "
-                     "chat profile photo with the one that was before."
+                     "and you are all done! When the day comes I’ll send my congratulation to this chat group. "
                      "\n\nWith me it’s impossible to forget about birthdays of your friends! "
-                     "\n\nMy creator (@IronTony_Stark github.com/IronTony-Stark/Telegram-Happy-Birthday-Bot) said that "
-                     "he will be very thankful for your feedback, any suggestions are welcomed and bug reports are "
-                     "priceless! Well, personally I am not sure about the last, but my creator knows best", True)
+                     "\n\nBy (@chaghatai  github.com/jendermine/Telegram-Happy-Birthday-Bot) "
+                     "\n\nPS: My real OG creator is (@IronTony_Stark github.com/IronTony-Stark/Telegram-Happy-Birthday-Bot) ", True)
 
 
 @bot.message_handler(commands=['nextbirthday'])
@@ -379,7 +375,6 @@ def pin_message(query):
 def remove_markup(query):
     bot.edit_message_reply_markup(query.message.chat.id, query.message.message_id)
     bot.answer_callback_query(query.id)
-
 
 # Threading ----------------------------------------------------------------------
 # By the way I haven't checked if it works.. But I suppose it does :)

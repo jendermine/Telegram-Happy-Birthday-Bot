@@ -1,6 +1,6 @@
 # Telegram Happy Birthday Bot
 
-## Link: https://t.me/Bot_Happy_Birthday_Bot
+## Link: <link_here>
 
 ## Often forgetting when the birthday of your friend is? This won’t happen again!
 I am **HappyBirthdayBot** and I’ll make sure your friends are happy when their birthdays come! 
@@ -18,15 +18,11 @@ My creator said that he will be very thankful for your feedback, any suggestions
 are welcomed and bug reports are priceless! Well, personally I am not sure about the last, 
 but my creator knows best
 
-## Birthdays
-
-![](screenshots/1.jpg) ![](screenshots/2.jpg) ![](screenshots/3.jpg)
--
-![](screenshots/4.jpg) ![](screenshots/5.jpg) ![](screenshots/6.jpg)
-
 ## License & copyright
 
 Copyright (C) 16.06.2019 Anton Zalinyi, software engineer in the National University of "Kyiv-Mohyla Academy"
+Copyright (C) 01.02.2023 Jendermine
+
 
 Licensed under the [Mozilla Public License](LICENSE).
 [pyTelegramBotAPI license](https://github.com/eternnoir/pyTelegramBotAPI/blob/master/LICENSE)
