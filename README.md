@@ -1,6 +1,6 @@
 # Telegram Happy Birthday Bot
 
-## Link: <link_here>
+## Link: https://t.me/wishboi_bot
 
 ## Often forgetting when the birthday of your friend is? This won’t happen again!
 I am **HappyBirthdayBot** and I’ll make sure your friends are happy when their birthdays come! 
