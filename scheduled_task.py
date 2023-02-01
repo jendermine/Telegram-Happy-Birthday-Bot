@@ -1,3 +1,4 @@
+'''
 """
 Runs everyday at 7:00 (UTC time zone)
 Firstly, searches in the database for chats where there was a birthday yesterday. In such chats bot sets the chat photo
@@ -41,7 +42,7 @@ for past_birthday in was_birthdays:
         val = (chat_id_of_past_birthday,)
         cursor.execute(sql, val)
         db.commit()
-        continue
+        continue       
     # Set photo which was before person's birthday as a chat photo again -----------------------------------
     chat_photo_now = chat.photo
     if chat_photo_now:
@@ -67,7 +68,7 @@ for past_birthday in was_birthdays:
     val = (chat_id_of_past_birthday, new_photo_of_past_birthday_id, old_photo_of_past_birthday_id)
     cursor.execute(sql, val)
     db.commit()
-
+    
 # ----------------------------------------------------------------------------------------------------------
 # Check if someone has birthday today ----------------------------------------------------------------------
 # Edit to fit MySQl DATE_FORMAT(Birthday, '%m.%d') ---------------------------------------------------------
@@ -97,6 +98,7 @@ for birthday in birthdays:
         cursor.execute(sql, val)
         db.commit()
         continue
+
     # Get user_who_has_birthday profile photo
     user_profile_photos = bot.get_user_profile_photos(user_who_has_birthday_id, limit=1).photos
     if not user_profile_photos:
@@ -129,6 +131,7 @@ for birthday in birthdays:
         bot.set_chat_photo(chat, file)
     except telebot.apihelper.ApiException:
         bot.send_message(chat, "I can't set a chat photo :( \nLooks like I don't have the appropriate admin rights")
+
     # Insert data into MySQL table
     new_chat_photo_id = bot.get_chat(chat).photo.big_file_id
     sql = "SELECT * FROM was_birthday WHERE Chat_Id = %s"
@@ -150,3 +153,4 @@ for birthday in birthdays:
     bot.send_message(chat, random_message.format(name), reply_markup=create_markup_pin())
     random_sticker = constants.stickers_to_congratulate.get(random.randint(1, len(constants.stickers_to_congratulate)))
     bot.send_sticker(chat, random_sticker)
+'''
